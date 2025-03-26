@@ -32,7 +32,11 @@ JsUser.email = "tamanna@microsoft.com"
 // in js functions can be treated like variables . In functions there is no discrimination
 JsUser.greeting = function(){
     console.log("Helo JS user");
-    
+}
+JsUser.greetingTwo = function(){
+    console.log(`Helo JS user,${this.name}`);
 }
 
-console.log(JsUser.greeting);
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
+
