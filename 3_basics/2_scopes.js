@@ -48,3 +48,29 @@ if (true) {
 
 // console.log(username)     // This will also give error as we have console this
                           // username outside the scope . Hence not defined.
+
+
+
+//   +++++++++++++++++ interesting +++++++++++++++++++++++++++++++
+
+console.log(addone(5))
+function addone(num) {
+    return num + 1
+}
+
+
+//addTwo(5)                  // here this will give error as it can't access addTwo() before intialization
+const addTwo = function(num) {    //this is also a function
+    return num + 2                // but it is also called expression(it's like a variable) 
+}
+addTwo(5)
+
+
+/**
+  
+In line 56 addone() is declared above function it'll give no error
+but if addTwo() is declared before function it will give error as 
+while declaring the funcion of addTwo() we have also given some value to it.
+the main reason is hoisting
+
+ */
